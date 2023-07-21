@@ -1,0 +1,41 @@
+.card, .card img {
+    border-radius: 1em;
+}
+.card {
+    height:200px; 
+    width:500px; 
+    background-color: transparent;
+    
+    border-width:0em; 
+    border-style: solid;
+    border-color:yellow; 
+}
+.card img {
+    height: 100%;
+    width:100%; 
+    
+    
+}
+.card:hover {
+    
+    border-width:.1em; 
+    transform:scale(200%); 
+    transition:all .2s ease-in; 
+    animation:onhover .4s; 
+    
+}
+
+@keyframes onhover {
+    0% {
+        filter:brightness(100%)
+    }
+    10% {
+        filter:brightness(300%)
+    }
+    50% {
+        filter:brightness(300%)
+    }
+    50% {
+        filter:brightness(0%)
+    }
+}
