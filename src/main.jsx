@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import NavBar from './Components/NavBar/Navbar'
 import Waves from './Components/Waves/waves'
-import Card from './Components/Cards/Card'
+import Card_Art from './Components/Cards/Card_Art'
 import './index.css'
 // DEFAULT ** IMPORTANT ** 
 // ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +17,9 @@ import './index.css'
 //Test 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Card></Card>
+    <div id ="test">
+    <Card_Art></Card_Art>
+    </div>
+    
   </React.StrictMode>,
 )
