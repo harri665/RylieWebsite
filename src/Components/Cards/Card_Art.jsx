@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
+import ALL from "../../assets/ALL.json"
 import './Card_Art.css'
 
 
 function CardImage(props) {
+  var image = props.image; 
+  if(!props.image) {
+    image = ALL.UnFound; 
+  }
   var id = Math.floor(Math.random()*100000); 
   useEffect(() => {
     window.requestAnimationFrame(function(){
@@ -38,14 +43,37 @@ function CardImage(props) {
   },[]);
   return(
     <div id={id} className="container">
-      <img  id={id+"layer"} className="box" src = {"src/Components/Cards/main.png"}></img>
+      <img  id={id+"layer"} className="box" src = {image}></img>
 
     </div>
   )
 }
 
+
+//REQUIRES 
+// image 
+// title 
+// desc 
+// CardClicked
+
+
 export default function Card_Art(props) {
+
+  //setup
+  var image = props.image; 
+  if(!props.image) {
+    image = "src/assets/404.jpg"
+  }
+  var title = props.title; 
+  if(!props.title) {
+    title = "untitled title"
+  }
+  var desc = props.desc; 
+  if(!props.desc) {
+    desc = "undescript description"
+  }
     
+
     const handleClick = event => {
       CardClicked(props.value)
     };
@@ -56,7 +84,7 @@ export default function Card_Art(props) {
       if(!visible) {
         visible = true; 
         setthreed(<CardImage value = {props.value}/>)
-        setquickdesc(<p>{"desc"}</p>)
+        setquickdesc(<p>{desc}</p>)
       }
     }
     function checkRemove() {
@@ -69,17 +97,16 @@ export default function Card_Art(props) {
   
     const styleling = {
       // backgroundImage:'url(src/Projects/' +props.value.imageext + ')',
-      backgroundImage: 'linear-gradient(to bottom, rgba(49, 49, 49, 0.52), rgba(28, 28, 28, 0.73)),url("src/Components/Cards/main.png")',
+      backgroundImage: 'linear-gradient(to bottom, rgba(49, 49, 49, 0.52), rgba(28, 28, 28, 0.73)),url("'+image+'")',
       color:"white", 
       
       
     }
-    var type = "THREEDUNDERLINE"; 
     return(
-      <div onClick={handleClick} className='Card_Art' style = {styleling} onMouseOver={(event)=>{checkadd(event)}} onMouseLeave = {(event)=> {checkRemove(event)}}>
+      <div onClick={props.CardClicked} className='Card_Art' style = {styleling} onMouseOver={(event)=>{checkadd(event)}} onMouseLeave = {(event)=> {checkRemove(event)}}>
         
         <div className='nobox'>
-          <h1 id = {type}> {"test"}</h1>
+          <h1> {title}</h1>
           {threed}
           {quickdesc}
         </div>
