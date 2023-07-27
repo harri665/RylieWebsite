@@ -1,0 +1,62 @@
+
+#navbar li a {
+	background-color: rgba(0, 0, 0, 0.425);
+	border-radius: 1vh;
+    color:white; 
+}
+#navbar li a img {
+    color:white; 
+    fill:white; 
+
+}
+#navbar li p {
+    color:black;
+    font-weight: bolder;
+    width: 100px;
+    padding:0; 
+    margin:0; 
+
+    text-align: center;
+}
+
+#navbar {
+	position: fixed; 
+	top:0; 
+	padding:2%; 
+	list-style: none;
+	display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+	transition: width 1.5s;
+    margin: 0;
+    padding: 0;
+
+}
+
+#navbar li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+
+}
+
+.pagelink {
+	margin-right:3vw;
+	font-weight: bolder;
+	color:rgba(255, 255, 255, 0.685); 
+	transition: opacity 2s, color 1s, font-size .2s; 
+	font-size: 3vh;
+	text-align: center;
+
+}
+.pagelink:hover {
+	
+	
+	font-size: 5vh; 
+	opacity: 150%;
+	color:white; 
+}
+
+
+
