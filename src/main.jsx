@@ -15,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <NavBar></NavBar>
       <Waves></Waves>
+      <div id = "test"></div>
   </React.StrictMode>,
 )
 

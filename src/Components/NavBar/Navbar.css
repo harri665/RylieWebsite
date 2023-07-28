@@ -20,6 +20,7 @@
 }
 
 #navbar {
+    z-index: 99999;
 	position: fixed; 
 	top:0; 
 	padding:2%; 
