@@ -2,8 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import NavBar from './Components/NavBar/Navbar'
 import Waves from './Components/Waves/waves'
+import WaveVertical from './WaveVertical/WaveVertical'
 import Card_Art from './Components/Cards/Card_Art'
 import './index.css'
+import About from './Components/About/About'
 
 
 // ICONS 
@@ -14,7 +16,8 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <NavBar></NavBar>
-      <Waves></Waves>
+      <WaveVertical></WaveVertical>
+      <About></About>
       <div id = "test"></div>
   </React.StrictMode>,
 )

@@ -1,0 +1,44 @@
+body {
+    background-color: #5461C3
+  }
+  .BoxWaveVertical {
+    position: fixed;
+    top: 0;
+    transform: rotate(80deg); 
+    left: 0;
+  }
+  
+  .WaveVertical {
+    position: absolute;
+    opacity: .4;
+    width: 150vw;
+    height: 150vh;
+    margin-left: -10vh;
+    margin-top: -40vw;
+    border-radius: 43%;
+    cursor:default; 
+  }
+  
+
+  
+  .WaveVertical.-one {
+    animation: rotate 100000ms infinite linear;
+    opacity: 5%;
+    background: green;
+    transform: rotate(0deg);
+  }
+  
+  
+  .WaveVertical.-two {
+    animation: rotate 60000ms infinite linear;
+    opacity: 10%;
+    background: green;
+    transform: rotate(0deg);
+  }
+  
+  
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    from {transform: rotate(360deg);}
+  }
+
